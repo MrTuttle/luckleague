@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Library Template
+Template Name: Podcast Template
 */
 ?>
 
@@ -20,7 +20,7 @@ Template Name: Library Template
                     <ul class="nav nav-pills"  id="isotope">
                      <li id="all"><a href="#">All</a></li>
           <?php
-          $args = array('type' => 'training','taxonomy' => 'training_category');
+          $args = array('type' => 'post','taxonomy' => 'category');
           $categories = get_categories( $args ); ?>
 
           <?php
@@ -45,7 +45,7 @@ Template Name: Library Template
 
 					
 					<?php
-                    $args = array ('post_type' => 'training',
+                    $args = array ('post_type' => 'post',
                                    'posts_per_page' =>'-1',
                                    'orderby' => 'date'
                         );
@@ -58,8 +58,8 @@ Template Name: Library Template
 
                        <?php $query->the_post();
                             $terms_class = '';
-                            $terms  = get_field('category');
-							if( $terms){ foreach ($terms as $term) { $terms_class .= $term->slug . ' '; } }
+                           $post_categories  = get_the_category( $post->id );
+							if( $post_categories){ foreach ($post_categories as $term) { $terms_class .= $term->slug . ' '; } }
 						?>	
 
 								<div class="col-sm-12 media all item <?php echo $terms_class; ?>">
@@ -68,7 +68,7 @@ Template Name: Library Template
 								  </a>
 								  <div class="media-body">
 								   <h4 class="media-heading"><a href="<?php echo get_permalink($post->id); ?>"><?php echo get_the_title($post->ID); ?></a></h4>
-								   <p class="media-description"><?php the_field('description') ?></p>
+								   <p class="media-description"><?php the_excerpt(); ?></p>
 								   <p class="get-started"><a href="<?php echo get_permalink($post->id ); ?>">Get Started!</a></p>
 								  </div>
 								</div>

@@ -241,8 +241,9 @@ ul.nav {
 }
 
 /*isotope styling*/
+
 .isotope-grid{ margin: 25px 0px;}
-.isotope-container{background: #e0e6ed}
+.isotope-container{background: #e0e6ed;display: none;}
 #isotope li {
 
 	padding: 0px 20px;font-size:15px;
@@ -291,7 +292,6 @@ h2.category-name{
 
 #main article{
 	margin-bottom: 18px;
-	border-bottom: 1px solid #eeeeee;
 	padding: 0 0 9px;
 }
 
@@ -703,12 +703,21 @@ blockquote.pull-left{
 @media only screen and (min-width: 980px) {
 
   
+     .isotope-container{display: block;}
+
+	.container{width: 970px}
+
+
+
 	.container-fluid{
 		max-width: 970px;
 		margin: 0 auto;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+
+
+
 	
 	#inner-footer{
 		padding: 0;

@@ -371,7 +371,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_enqueue_script('wpbs-scripts');
     wp_enqueue_script('modernizr');
 
-     if (is_page_template('page-library.php' ) || is_page_template('page-blog.php' )) {
+     if (is_page_template('page-library.php' ) || is_page_template('page-podcast.php' )) {
             wp_enqueue_script( 'isotope', get_template_directory_uri() . '/library/js/isotope.pkgd.min.js', array( 'jquery' ), 1.0, false);
             wp_enqueue_script( 'custom', get_template_directory_uri() . '/library/js/custom.js', array( 'jquery' ), 1.0, false);
         }
@@ -433,7 +433,7 @@ function chris_custom_post_type()
         'description'         => __( 'trainings', 'chris' ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'editor'),
-
+        'taxonomies'          => array( 'training_category' ),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -523,7 +523,7 @@ function rolodex_custom_post_type()
         'label'               => __( 'rolodex', 'text_domain' ),
         'description'         => __( 'Rolodex', 'text_domain' ),
         'labels'              => $labels,
-
+        'taxonomies'          => array( 'rolodex_category' ),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
