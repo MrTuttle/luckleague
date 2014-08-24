@@ -37,6 +37,7 @@
 
 @black: #1c1c1c;
 @light-gray: #8c989e;
+@sky-blue: #23a4cf;
 
 
 
@@ -92,13 +93,13 @@ font-weight: bold;
 @font-face {
 font-family: "GothamRounded Book";
 src: url("../../fonts/gotham-rounded-book.woff");
-font-weight: bold;
+font-weight: normal;
 }
 
 
 /*font sizes*/
 
-h1{ font-size: @font-size-h1 + 4px;}
+h1{ font-size: @font-size-h1 + 4px; font-family: "GothamRounded Medium"}
 
 
 /*headlines*/
@@ -238,6 +239,35 @@ ul.nav {
 	/*background-size: 100% auto;*/
 
 }
+
+/*isotope styling*/
+.isotope-grid{ margin: 25px 0px;}
+.isotope-container{background: #e0e6ed}
+#isotope li {
+
+	padding: 0px 20px;font-size:15px;
+
+	a {
+	padding: 20px 5px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #aaaaaa;
+	  &:hover,&:focus{
+	  	color:#1c1c1c;
+	  	background: none;
+	  }
+	}
+}
+
+/*Media styling */
+
+.media{margin-bottom: 45px;}
+.media-object{padding-right: 10px;}
+.media-heading a{ font-size: 28px;font-family: "GothamRounded Medium";letter-spacing: 1.5px;color:#384047;text-decoration: none}
+.media-description {font-size: 16px;color: @light-gray;line-height: 1.6em;font-weight: 400;margin-bottom: 20px; }
+.get-started a{color:@sky-blue;font-size: 16px;}
+
+
 
 /* post styling */
 
