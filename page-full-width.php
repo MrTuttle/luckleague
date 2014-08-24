@@ -58,5 +58,5 @@ Template Name: Full Width Page
 				<?php //get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
-
+</div>
 <?php get_footer(); ?>

@@ -69,7 +69,7 @@ Template Name: Podcast Template
 								  <div class="media-body">
 								   <h4 class="media-heading"><a href="<?php echo get_permalink($post->id); ?>"><?php echo get_the_title($post->ID); ?></a></h4>
 								   <p class="media-description"><?php the_excerpt(); ?></p>
-								   <p class="get-started"><a href="<?php echo get_permalink($post->id ); ?>">Get Started!</a></p>
+								   <p class="get-started"><a href="<?php echo get_permalink($post->id ); ?>">Listen to this episode</a></p>
 								  </div>
 								</div>
 
@@ -84,5 +84,5 @@ Template Name: Podcast Template
 				<?php //get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
-
+</div>
 <?php get_footer(); ?>

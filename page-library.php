@@ -84,5 +84,5 @@ Template Name: Library Template
 				<?php //get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
-
+</div>
 <?php get_footer(); ?>

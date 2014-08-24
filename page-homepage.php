@@ -56,5 +56,11 @@ Template Name: Homepage
 				<?php //get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
+  </div>
+
+   
+		<?php
+            if (!is_user_logged_in() && get_field('optin')) { get_template_part('content','optin' ); }
+         ?>		
 
 <?php get_footer(); ?>

@@ -1,7 +1,14 @@
 <?php get_header(); ?>
 			
 			
-<?php get_template_part('content','headline' ); ?>
+ <div class="container">
+  <div class="clearfix row">
+    <div class="col-sm-12 headline-area">
+      <h1 class="text-center"><?php the_field('big_headline',10) ?></h1>
+            <p class="text-center small-headline"><?php the_field('small_headline',10) ?></p>
+    </div>
+  </div>
+ </div>
 
 
 
@@ -75,5 +82,5 @@
 				<?php //get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
-
+</div>
 <?php get_footer(); ?>

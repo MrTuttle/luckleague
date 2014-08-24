@@ -1,4 +1,4 @@
-				</div> <!-- end #container -->
+				<!-- end #container -->
 
 			<div style="background:#1c1c1c">
 				<div class="container">

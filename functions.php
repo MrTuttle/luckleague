@@ -583,6 +583,8 @@ function rolodex_custom_taxonomy()
 
 // Hook into the 'init' action
 add_action( 'init', 'rolodex_custom_taxonomy', 0 );
-
 }
+
+function optin_modal(){ return get_template_part('content','modal' ); }
+add_shortcode( 'optin_modal','optin_modal' );
 ?>
