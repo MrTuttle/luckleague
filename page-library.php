@@ -64,7 +64,7 @@ Template Name: Library Template
 
 								<div class="media all item <?php echo $terms_class; ?>">
 								  <a class="pull-left" href="#">
-								    <img class="media-object" src="<?php the_field('image') ?>" alt="training image">
+								    <img class="media-object" src="<?php the_field('image') ?>" alt="training image" style="width:150px;height:150px">
 								  </a>
 								  <div class="media-body">
 								   <h4 class="media-heading"><a href="<?php echo get_permalink($post->id); ?>"><?php echo get_the_title($post->ID); ?></a></h4>

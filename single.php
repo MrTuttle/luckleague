@@ -1,48 +1,36 @@
 <?php get_header(); ?>
-			
+
+<div class="container">		
 			<div id="content" class="clearfix row">
 			
-				<div id="main" class="col-sm-8 clearfix" role="main">
+				<div id="main" class="col col-lg-12 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						
 						<header>
-						
-							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
 							
-							<div class="page-header"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
-							
-							<p class="meta"><?php _e("Posted", "wpbootstrap"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time(); ?></time> <?php _e("by", "wpbootstrap"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "wpbootstrap"); ?> <?php the_category(', '); ?>.</p>
+							<div class="page-header"><h1><?php the_title(); ?></h1></div>
 						
 						</header> <!-- end article header -->
 					
-						<section class="post_content clearfix" itemprop="articleBody">
+						<section class="post_content">
 							<?php the_content(); ?>
-							
-							<?php wp_link_pages(); ?>
 					
 						</section> <!-- end article section -->
 						
 						<footer>
 			
-							<?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","wpbootstrap") . ':</span> ', ' ', '</p>'); ?>
-							
-							<?php 
-							// only show edit button if user has permission to edit posts
-							if( $user_level > 0 ) { 
-							?>
-							<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-success edit-post"><i class="icon-pencil icon-white"></i> <?php _e("Edit post","wpbootstrap"); ?></a>
-							<?php } ?>
+							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
 							
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
 					
-					<?php comments_template('',true); ?>
+					<?php /*comments_template();*/ ?>
 					
-					<?php endwhile; ?>			
+					<?php endwhile; ?>	
 					
 					<?php else : ?>
 					
@@ -61,7 +49,7 @@
 			
 				</div> <!-- end #main -->
     
-				<?php get_sidebar(); // sidebar 1 ?>
+				<?php //get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
 

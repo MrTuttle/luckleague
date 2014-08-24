@@ -498,4 +498,91 @@ function products_taxonomy()
 // Hook into the 'init' action
 add_action( 'init', 'products_taxonomy', 0 );
 }
+
+if ( ! function_exists('rolodex_custom_post_type') ) {
+
+// Register Custom Post Type
+function rolodex_custom_post_type()
+{
+    $labels = array(
+        'name'                => _x( 'Rolodexes', 'Post Type General Name', 'text_domain' ),
+        'singular_name'       => _x( 'Rolodex', 'Post Type Singular Name', 'text_domain' ),
+        'menu_name'           => __( 'Rolodexes', 'text_domain' ),
+        'parent_item_colon'   => __( 'Parent Rolodex:', 'text_domain' ),
+        'all_items'           => __( 'All Rolodexes', 'text_domain' ),
+        'view_item'           => __( 'View Rolodex', 'text_domain' ),
+        'add_new_item'        => __( 'Add New Rolodex', 'text_domain' ),
+        'add_new'             => __( 'Add Rolodex', 'text_domain' ),
+        'edit_item'           => __( 'Edit Rolodex', 'text_domain' ),
+        'update_item'         => __( 'Update Rolodex', 'text_domain' ),
+        'search_items'        => __( 'Search Rolodex', 'text_domain' ),
+        'not_found'           => __( 'Not found', 'text_domain' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+    );
+    $args = array(
+        'label'               => __( 'rolodex', 'text_domain' ),
+        'description'         => __( 'Rolodex', 'text_domain' ),
+        'labels'              => $labels,
+
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+    );
+    register_post_type( 'rolodex', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'rolodex_custom_post_type', 0 );
+
+}
+
+if ( ! function_exists( 'rolodex_custom_taxonomy' ) ) {
+
+// Register Custom Taxonomy
+function rolodex_custom_taxonomy()
+{
+    $labels = array(
+        'name'                       => _x( 'Rolodex Categories', 'Taxonomy General Name', 'text_domain' ),
+        'singular_name'              => _x( 'Rolodex Category', 'Taxonomy Singular Name', 'text_domain' ),
+        'menu_name'                  => __( 'Rolodex Categories', 'text_domain' ),
+        'all_items'                  => __( 'All Rolodex Categories', 'text_domain' ),
+        'parent_item'                => __( 'Parent Rolodex Category', 'text_domain' ),
+        'parent_item_colon'          => __( 'Parent Rolodex Category:', 'text_domain' ),
+        'new_item_name'              => __( 'New Rolodex Category', 'text_domain' ),
+        'add_new_item'               => __( 'Add New Rolodex Category', 'text_domain' ),
+        'edit_item'                  => __( 'Edit Rolodex Category', 'text_domain' ),
+        'update_item'                => __( 'Update Rolodex Category', 'text_domain' ),
+        'separate_items_with_commas' => __( 'Separate Rolodex Categories with commas', 'text_domain' ),
+        'search_items'               => __( 'Search Rolodex Categories', 'text_domain' ),
+        'add_or_remove_items'        => __( 'Add or remove Rolodex Categories', 'text_domain' ),
+        'choose_from_most_used'      => __( 'Choose from the most used categories', 'text_domain' ),
+        'not_found'                  => __( 'Not Found', 'text_domain' ),
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+    register_taxonomy( 'rolodex_category', array( 'rolodex' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'rolodex_custom_taxonomy', 0 );
+
+}
 ?>
