@@ -6,7 +6,26 @@ Template Name: Homepage
 
 <?php get_header(); ?>
 			
+			
+
+ <div class="container">
+ 	<div class="clearfix row">
+ 		<div class="col-sm-12 headline-area">
+ 			<h1 class="text-center"><?php the_field('big_headline') ?></h1>
+						<p class="text-center small-headline"><?php the_field('small_headline') ?></p>
+ 		</div>
+ 	</div>
+ </div>
+
+
+
+  <div class="rainbow-line"></div>
+
+
+	<div class="container">
+
 			<div id="content" class="clearfix row">
+
 			
 				<div id="main" class="col-sm-12 clearfix" role="main">
 
@@ -14,40 +33,7 @@ Template Name: Homepage
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 					
-						<header>
-
-							<?php 
-								$post_thumbnail_id = get_post_thumbnail_id();
-								$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-home' );
-							?>
-
-							<div class="jumbotron" style="background-image: url('<?php echo $featured_src[0]; ?>'); background-repeat: no-repeat; background-position: 0 0;">
-				
-								<div class="page-header">
-									<h1><?php bloginfo('title'); ?><small><?php echo get_post_meta($post->ID, 'custom_tagline' , true);?></small></h1>
-								</div>				
-								
-							</div>
-						
-						</header>
-						
-						<section class="row post_content">
-						
-							<div class="col-sm-8">
-						
-								<?php the_content(); ?>
-								
-							</div>
-							
-							<?php get_sidebar('sidebar2'); // sidebar 2 ?>
-													
-						</section> <!-- end article header -->
-						
-						<footer>
-			
-							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
-							
-						</footer> <!-- end article footer -->
+						<?php the_content(); ?>
 					
 					</article> <!-- end article -->
 					

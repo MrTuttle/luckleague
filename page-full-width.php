@@ -5,7 +5,8 @@ Template Name: Full Width Page
 ?>
 
 <?php get_header(); ?>
-			
+
+<div class="container">		
 			<div id="content" class="clearfix row">
 			
 				<div id="main" class="col col-lg-12 clearfix" role="main">
@@ -33,7 +34,7 @@ Template Name: Full Width Page
 					
 					</article> <!-- end article -->
 					
-					<?php comments_template(); ?>
+					<?php /*comments_template();*/ ?>
 					
 					<?php endwhile; ?>	
 					

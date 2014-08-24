@@ -47,7 +47,7 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a class="navbar-brand visible-xs" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+                        <a class="navbar-brand hidden-lg" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
                     </div>
 
                     <div class="collapse navbar-collapse navbar-responsive-collapse">
@@ -60,4 +60,3 @@
 
         </header> <!-- end header -->
 
-        <div class="container">

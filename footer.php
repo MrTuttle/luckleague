@@ -1,29 +1,27 @@
-			<footer role="contentinfo">
+				</div> <!-- end #container -->
+
+			<div style="background:#1c1c1c">
+				<div class="container">
+				<div class="row clearfix">
+					<footer role="contentinfo">
 			
 				<div id="inner-footer" class="clearfix">
-		          <hr />
-		          <div id="widget-footer" class="clearfix row">
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
-		            <?php endif; ?>
-		          </div>
+		          
+		          <img src="<?php echo get_template_directory_uri() . '/images/featured.png' ?>" alt="footer-image" class="img-responsive">
 					
 					<nav class="clearfix">
-						<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
+				<span style="float:left;color:#4e5155">© Chris Luck Enterprises, Inc |</span> <?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 					
-					<p class="pull-right"><a href="http://320press.com" id="credit320" title="By the dudes of 320press">320press</a></p>
-			
-					<p class="attribution">&copy; <?php bloginfo('name'); ?></p>
 				
 				</div> <!-- end #inner-footer -->
 				
 			</footer> <!-- end footer -->
+				</div>
+			</div>
+			</div>
 		
-		</div> <!-- end #container -->
+	
 				
 		<!--[if lt IE 7 ]>
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
