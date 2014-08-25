@@ -40,6 +40,11 @@
 @sky-blue: #23a4cf;
 
 
+@green: #16B661;
+@orange: #FFAD4B;
+@light-green: #5AD38F;
+@light-pink: #FF5C8B;
+
 
 /*fonts*/
 
@@ -171,7 +176,8 @@ input, textarea, select, .uneditable-input {
 	a{color:#4e5155}
 }
 
-/* navbar */
+/* menu styling*/
+
 .navbar{
 	border-radius: 0px;
 	background: @black;
@@ -184,22 +190,15 @@ input, textarea, select, .uneditable-input {
 	background: none;
 }
 
+.menu-hover{ border-bottom: 3px solid;}
 
 
-ul.nav {
+#menu-main-menu {
 
-	font-family: "GothamRounded Medium";
-	font-size: 15px;
-	text-transform: uppercase;
-	border-radius: 0px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	
+ 	li.current-menu-item.light-green {border-color: @light-green}
 
-	li{ margin-right: 53px; 
-		&:last-child {margin-right: 0px;}
-	}
-
-	li.current-menu-item a { border-bottom: 3px solid #1da2ce; padding: 15px 5px 5px 5px}
+	
 	li.dropdown:hover > ul.dropdown-menu {
     /*	display: block;    */
     /* */
@@ -265,9 +264,9 @@ ul.nav {
 /*Media styling */
 
 .media{margin-bottom: 45px;}
-.media-object{padding-right: 10px;}
+.media-object{margin-right: 10px;}
 .media-heading a{ font-size: 28px;font-family: "GothamRounded Medium";letter-spacing: 1.5px;color:#384047;text-decoration: none}
-.media-description {font-size: 16px;color: @light-gray;line-height: 1.6em;font-weight: 400;margin-bottom: 20px; }
+.media-description,.media-body p{font-size: 16px;color: @light-gray;line-height: 1.6em;font-weight: 400;margin-bottom: 12px; }
 .get-started a{color:@sky-blue;font-size: 16px;}
 
 /*Rolodex Styling*/
@@ -513,7 +512,7 @@ form#gform_1.contact-form1 label.gfield_label{
 	padding: 0 0 9px;
 	font-size: 18px;
 	line-height: 33px;
-	min-height: 350px
+	min-height: 550px
 }
 
 #main article footer{
@@ -928,7 +927,7 @@ blockquote.pull-left{
 
 @media only screen and (min-width: 980px) {
 
-  
+
     .isotope-container{display: block;}
 
 	.container{width: 970px}
@@ -994,9 +993,47 @@ blockquote.pull-left{
 	}
 }
 
+
+@media only screen and (min-width:1200px){
+	#menu-main-menu{
+    	font-size: 15px;
+	text-transform: uppercase;
+	border-radius: 0px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+	font-family: "GothamRounded Book";
+
+	li{ margin-right: 67px; 
+		.menu-hover;
+		border-color: @black;
+		a{padding: 15px 2px 2px 2px;}
+
+		&:last-child {margin-right: 0px;}
+		&:hover{.menu-hover}
+	}
+
+
+
+	li.current-menu-item  { .menu-hover }
+	
+ 	li.blue  {  &:hover{ border-color: @sky-blue;}}
+ 	li.green { &:hover {border-color: @green;}}
+ 	li.light-pink { &:hover {border-color: @light-pink;}}
+ 	li.orange { &:hover {border-color: @orange;}}
+ 	li.light-green{&:hover {border-color: @light-green;}}
+
+ 	li.current-menu-item.blue {border-color: @sky-blue}
+ 	li.current-menu-item.green {border-color: @green} 
+ 	li.current-menu-item.light-pink {border-color: @light-pink}
+ 	li.current-menu-item.orange {border-color: @orange}
+    }
+}
 @media only screen and (min-width: 480px){
  	#optin-button{
  		font-size: 25px;
  	}
  	#optin h2{ font-size: 25px}
 }
+
+

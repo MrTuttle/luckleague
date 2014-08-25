@@ -5,7 +5,7 @@
  	<div class="clearfix row">
  		<div class="col-sm-12 headline-area">
  			<h1 class="text-center"><?php echo get_the_title( $post->ID ); ?></h1>
-						<p class="text-center small-headline"><?php the_field('description') ?></p>
+						<p class="text-center small-headline"><?php the_field('sub_headline') ?></p>
  		</div>
  	</div>
  </div>

@@ -1,6 +1,6 @@
 				<!-- end #container -->
 
-			<div style="background:#1c1c1c">
+			<div style="background:#1c1c1c;">
 				<div class="container">
 				<div class="row clearfix">
 					<footer role="contentinfo">
@@ -9,7 +9,7 @@
 		          
 		          <img src="<?php echo get_template_directory_uri() . '/images/featured.png' ?>" alt="footer-image" class="img-responsive">
 					
-					<nav class="clearfix">
+					<nav class="clearfix visible-lg col-lg-11 col-lg-offset-1">
 				<span style="float:left;color:#4e5155">© Chris Luck Enterprises, Inc |</span> <?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 					
@@ -20,6 +20,7 @@
 				</div>
 			</div>
 			</div>
+
 		
 	
 				
