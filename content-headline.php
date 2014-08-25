@@ -1,4 +1,4 @@
- <div class="container">
+<div style="background-color:#EEF1F5;"> <div class="container">
  	<div class="clearfix row">
  		<div class="col-sm-12 headline-area">
  			<h1 class="text-center"><?php the_field('big_headline') ?></h1>
@@ -6,3 +6,4 @@
  		</div>
  	</div>
  </div>
+</div>

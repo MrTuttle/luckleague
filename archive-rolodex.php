@@ -59,8 +59,8 @@
                       </a>
                       <div class="media-body">
                         <h4 class="media-heading"><a href="<?php echo $perma_link; ?>"><?php echo $title = get_the_title( $post->id ); ?></a></h4>
-                        <p class="media-description"> <?php echo $content = get_the_content(); ?></p>
-                        <p class="get-started"><a href="<?php the_field('url'); ?>">Visit <?php echo $title; ?></a></p>
+                        <p class="media-description"> <?php the_field('description') ?></p>
+                        <p class="get-started"><a href="<?php the_field('url'); ?>" target="_blank">Visit <?php echo $title; ?></a></p>
                       </div>
                     </div>
 

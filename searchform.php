@@ -3,7 +3,7 @@
 		<div class="input-group">
 			<input type="text" name="s" id="search" placeholder="<?php _e("Search","wpbootstrap"); ?>" value="<?php the_search_query(); ?>" class="form-control" />
 			<span class="input-group-btn">
-				<button type="submit" class="btn btn-default"><?php _e("Search","wpbootstrap"); ?></button>
+				<button type="submit" class="btn btn-default" style="margin-top:20px"><?php _e("Search","wpbootstrap"); ?></button>
 			</span>
 		</div>
     </fieldset>

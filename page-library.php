@@ -63,7 +63,7 @@ Template Name: Library Template
 						?>	
 
 								<div class="col-sm-12 media all item <?php echo $terms_class; ?>">
-								  <a class="pull-left" href="#">
+								  <a class="pull-left" href="<?php echo get_permalink($post->id); ?>">
 								    <img class="media-object" src="<?php the_field('image') ?>" alt="training image" style="width:150px;height:150px">
 								  </a>
 								  <div class="media-body">

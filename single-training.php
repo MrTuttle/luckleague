@@ -1,14 +1,18 @@
 <?php get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 <div style="background-color:#EEF1F5;"> <div class="container">
  	<div class="clearfix row">
  		<div class="col-sm-12 headline-area">
  			<h1 class="text-center"><?php echo get_the_title( $post->ID ); ?></h1>
-						<p class="text-center small-headline"><?php the_field('small_headline') ?></p>
+						<p class="text-center small-headline"><?php the_field('description') ?></p>
  		</div>
  	</div>
  </div>
 </div>
+
+
+
 
  <div class="rainbow-line"></div>
 
