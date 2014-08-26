@@ -1,5 +1,5 @@
 /* All the styles that you would normally find in the style.css */
-//@import "mixins.less";
+@import "mixins.less";
 
 /* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* For modern browsers */
@@ -512,7 +512,7 @@ form#gform_1.contact-form1 label.gfield_label{
 	padding: 0 0 9px;
 	font-size: 18px;
 	line-height: 33px;
-	min-height: 550px
+	min-height: 150px;
 }
 
 #main article footer{
@@ -930,6 +930,12 @@ blockquote.pull-left{
 
     .isotope-container{display: block;}
 
+
+     #isotope{
+     	margin-left: 110px;
+     }
+     
+
 	.container{width: 970px}
 
 	
@@ -1028,12 +1034,39 @@ blockquote.pull-left{
  	li.current-menu-item.light-pink {border-color: @light-pink}
  	li.current-menu-item.orange {border-color: @orange}
     }
+
+     #main{
+     	min-height: 650px;
+     }
+
 }
 @media only screen and (min-width: 480px){
  	#optin-button{
  		font-size: 25px;
  	}
  	#optin h2{ font-size: 25px}
+ 	.media-object{width: 150px;}
+
+ 	
 }
 
 
+@media only screen and(max-width:480px){
+
+	/*h2.category-name{margin-bottom: 10px;}
+	.media{margin-bottom: 25px;}
+
+	.media-object{
+		margin-right: 5px;
+		width:80px;
+	}
+
+	.media-heading a{ font-size: 20px;}
+	.media-description,.media-body p{font-size: 14px;margin-bottom: 10px; }
+	.get-started a{font-size: 14px;}*/
+
+	.media-object{
+		display: none;
+	}
+ 
+}

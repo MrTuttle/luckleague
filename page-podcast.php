@@ -62,16 +62,18 @@ Template Name: Podcast Template
 							if( $post_categories){ foreach ($post_categories as $term) { $terms_class .= $term->slug . ' '; } }
 						?>	
 
-								<div class="col-sm-12 media all item <?php echo $terms_class; ?>">
-								  <a class="pull-left" href="#">
-								    <img class="media-object" src="<?php the_field('image') ?>" alt="training image" style="width:150px;height:150px">
-								  </a>
-								  <div class="media-body">
-								   <h4 class="media-heading"><a href="<?php echo get_permalink($post->id); ?>"><?php echo get_the_title($post->ID); ?></a></h4>
-								   <p class="media-description"><?php the_excerpt(); ?></p>
-								   <p class="get-started"><a href="<?php echo get_permalink($post->id ); ?>">Listen to this episode</a></p>
-								  </div>
-								</div>
+								<div class="row clearfix">
+          <div class="col-sm-12 media all item <?php echo $terms_class; ?>">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" src="<?php the_field('image') ?>" alt="training image">
+                  </a>
+                  <div class="media-body">
+                   <h4 class="media-heading"><a href="<?php echo get_permalink($post->id); ?>"><?php echo get_the_title($post->ID); ?></a></h4>
+                   <p class="media-description"><?php the_excerpt(); ?></p>
+                   <p class="get-started"><a href="<?php echo get_permalink($post->id ); ?>">Listen to this episode</a></p>
+                  </div>
+                </div>        
+                </div>
 
 						<? } //end while
 					 wp_reset_postdata();			

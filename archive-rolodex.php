@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 			
-			
+<div style="background-color:#EEF1F5;">			
  <div class="container">
   <div class="clearfix row">
     <div class="col-sm-12 headline-area">
@@ -9,7 +9,7 @@
     </div>
   </div>
  </div>
-
+</div>
 
 
   <div class="rainbow-line"></div>
@@ -53,9 +53,10 @@
                           while ( $query->have_posts() ) { ?>
                             <?php $query->the_post(); ?>
 
-                   <div class="media">
+                   <div class="row clearfix">
+                     <div class="media col-sm-12">
                       <a class="pull-left" href="<?php echo $perma_link = get_permalink($post->id ); ?>">
-                        <img class="media-object" src="<?php the_field('image'); ?>" alt="rolodex image" style="width:150px;height:150px">
+                        <img class="media-object img-responsive" src="<?php the_field('image'); ?>" alt="rolodex image">
                       </a>
                       <div class="media-body">
                         <h4 class="media-heading"><a href="<?php echo $perma_link; ?>"><?php echo $title = get_the_title( $post->id ); ?></a></h4>
@@ -63,6 +64,7 @@
                         <p class="get-started"><a href="<?php the_field('url'); ?>" target="_blank">Visit <?php echo $title; ?></a></p>
                       </div>
                     </div>
+                   </div>
 
                           <?php }
                         } else {
