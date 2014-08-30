@@ -1,6 +1,8 @@
 <?php 
 
-if (!empty(get_post_meta($post->ID,'leadbox_code',true ))) { ?>
+
+for ($i=1 ; $i <= 4; $i++) { 
+   if (!empty(get_post_meta($post->ID,'leadbox_code'.$i,true ))) { ?>
  <div style="background-color: #eef1f5;margin-top:40px">
     <section class="container">
         <div id="optin" class="row clearfix" style="position: relative">
@@ -10,18 +12,19 @@ if (!empty(get_post_meta($post->ID,'leadbox_code',true ))) { ?>
                 
                 </div>
                <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3"> 
-               <!-- <button type="button" id="optin-button" class="btn btn-success btn-block
-               <?php echo $class = (is_user_logged_in()) ? '' : 'eModal-1'; ?>">
-               <?php the_field('optin_button_text') ?></button> -->
-    
-               <?php echo get_post_meta($post->ID,'leadbox_code',true ) ;?>
+
+               <?php echo get_post_meta($post->ID,'leadbox_code'.$i,true ) ;?>
 
                </div>
 
         </div>
     </section>
 </div>
+ <?php break; ?>
 <?php }
+}
+
+
 
  ?>
 
