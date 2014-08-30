@@ -80,48 +80,6 @@ function wp_bootstrap_register_sidebars() {
     	'after_title' => '</h4>',
     ));
     
-    /*register_sidebar(array(
-      'id' => 'footer1',
-      'name' => 'Footer 1',
-      'before_widget' => '<div id="%1$s" class="widget col-sm-4 %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
-    ));
-
-    register_sidebar(array(
-      'id' => 'footer2',
-      'name' => 'Footer 2',
-      'before_widget' => '<div id="%1$s" class="widget col-sm-4 %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
-    ));
-
-    register_sidebar(array(
-      'id' => 'footer3',
-      'name' => 'Footer 3',
-      'before_widget' => '<div id="%1$s" class="widget col-sm-4 %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
-    ));*/
-    
-    
-    /* 
-    to add more sidebars or widgetized areas, just copy
-    and edit the above sidebar code. In order to call 
-    your new sidebar just use the following code:
-    
-    Just change the name to whatever your new
-    sidebar's id is, for example:
-    
-    To call the sidebar in your template, you can just copy
-    the sidebar.php file and rename it to your sidebar's name.
-    So using the above example, it would be:
-    sidebar-sidebar2.php
-    
-    */
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/
@@ -337,11 +295,13 @@ if( !function_exists("theme_styles") ) {
     function theme_styles() { 
         // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
         wp_register_style( 'bootstrap', get_template_directory_uri() . '/library/css/bootstrap.css', array(), '1.0', 'all' );
+        wp_register_style('google-font','//fonts.googleapis.com/css?family=Montserrat:400,700',array(),'1.0','all' );
         wp_enqueue_style( 'bootstrap' );
-
+        wp_enqueue_style('google-font');
         // For child themes
         wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'wpbs-style' );
+
     }
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );

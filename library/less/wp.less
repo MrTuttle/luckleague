@@ -361,7 +361,7 @@ form#contact-form input[type=text] {
 	-o-box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
-	font-family: "GothamRounded";
+	font-family: "GothamRounded Light";
 }
 form#contact-form textarea {
 	border: none;
@@ -377,7 +377,7 @@ form#contact-form textarea {
 	-o-box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
-	font-family: "GothamRounded";
+	font-family: "GothamRounded Light";
 }
 form#contact-form input[type=submit] {
 	background-color: #5fcf80;
@@ -393,7 +393,7 @@ form#contact-form input[type=submit] {
 	-o-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	font-family: "GothamRounded";
+	font-family: "GothamRounded Light";
 	font-weight: bold;
 	font-size: 22px;
 }
@@ -439,7 +439,7 @@ form#gform_1.contact-form1 input[type=text] {
 	-o-box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
-	font-family: "GothamRounded";
+	font-family: "GothamRounded Light";
 }
 form#gform_1.contact-form1 textarea {
 	border: none;
@@ -455,7 +455,7 @@ form#gform_1.contact-form1 textarea {
 	-o-box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
-	font-family: "GothamRounded";
+	font-family: "GothamRounded Light";
 }
 form#gform_1.contact-form1 input[type=submit] {
 	background-color: #5fcf80;
@@ -471,7 +471,7 @@ form#gform_1.contact-form1 input[type=submit] {
 	-o-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	font-family: "GothamRounded";
+	font-family: "GothamRounded Light";
 	font-weight: bold;
 	font-size: 22px;
 }
@@ -487,6 +487,7 @@ form#gform_1.contact-form1 input[type=submit]:hover {
 }
 
 
+
 form#gform_1.contact-form1 label.gfield_label{
 	display: none;
 }
@@ -500,7 +501,7 @@ form#gform_1.contact-form1 label.gfield_label{
 }
 
 /* post styling */
-
+.more-link{display: none}
 #main p.meta{
 	font-style: italic;
 	color: #808080;
@@ -508,11 +509,21 @@ form#gform_1.contact-form1 label.gfield_label{
 
 #main article{
 	margin-bottom: 18px;
-	margin-top:10px;
 	padding: 0 0 9px;
 	font-size: 18px;
-	line-height: 33px;
+	line-height: 30px;
 	min-height: 150px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color:#000;
+
+}
+
+#main article h2{
+	font-size: 24px;
+	line-height: 28px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 }
 
 #main article footer{
@@ -914,10 +925,56 @@ blockquote.pull-left{
 	padding-right: 15px;
 }
 
+
+
+@media only screen and(max-width:480px){
+
+	#gform_submit_button_1{margin-left: 50px;}
+
+	.media-object{
+		display: none;
+	}
+
+	form#gform_1.contact-form1 input[type=submit]{
+		font-size: 16px;
+		padding: 10px 25px;
+	}
+
+	form#gform_1.contact-form1 input[type=text],
+	form#gform_1.contact-form1 textarea{
+		font-size: 16px;
+	}
+ 
+}
+
+@media only screen and (max-width:320px){
+	//#gform_submit_button_1{margin-left: 5px;}
+	form#gform_1.contact-form1 input[type=submit]{
+		font-size: 14px;
+		padding:10px 12px;
+	}
+}
+
+@media only screen and (min-width: 480px){
+ 	#optin-button{
+ 		font-size: 25px;
+ 	}
+ 	#optin h2{ font-size: 25px}
+ 	.media-object{width: 150px;}
+
+ 	#gform_submit_button_1{margin-left: 50px;}
+}
+
+
+
+
+
 @media only screen and (min-width: 768px) {
 	.carousel-caption p{
 		display: block;
 	}
+
+	#gform_submit_button_1{margin-left: 115px;}
 }
 
 #eModal-1{
@@ -927,7 +984,7 @@ blockquote.pull-left{
 
 @media only screen and (min-width: 980px) {
 
-
+	#gform_submit_button_1{margin-left: 180px;}
     .isotope-container{display: block;}
 
 
@@ -1039,34 +1096,9 @@ blockquote.pull-left{
      	min-height: 650px;
      }
 
-}
-@media only screen and (min-width: 480px){
- 	#optin-button{
- 		font-size: 25px;
- 	}
- 	#optin h2{ font-size: 25px}
- 	.media-object{width: 150px;}
-
- 	
+	
 }
 
 
-@media only screen and(max-width:480px){
 
-	/*h2.category-name{margin-bottom: 10px;}
-	.media{margin-bottom: 25px;}
 
-	.media-object{
-		margin-right: 5px;
-		width:80px;
-	}
-
-	.media-heading a{ font-size: 20px;}
-	.media-description,.media-body p{font-size: 14px;margin-bottom: 10px; }
-	.get-started a{font-size: 14px;}*/
-
-	.media-object{
-		display: none;
-	}
- 
-}

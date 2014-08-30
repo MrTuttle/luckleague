@@ -1,4 +1,7 @@
-<div style="background-color: #eef1f5;margin-top:40px">
+<?php 
+
+if (!empty(get_post_meta($post->ID,'leadbox_code',true ))) { ?>
+ <div style="background-color: #eef1f5;margin-top:40px">
     <section class="container">
         <div id="optin" class="row clearfix" style="position: relative">
                   <div class="optin-smiley">
@@ -7,14 +10,20 @@
                 
                 </div>
                <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3"> 
-               <button type="button" id="optin-button" class="btn btn-success btn-block
+               <!-- <button type="button" id="optin-button" class="btn btn-success btn-block
                <?php echo $class = (is_user_logged_in()) ? '' : 'eModal-1'; ?>">
-               <?php the_field('optin_button_text') ?></button>
+               <?php the_field('optin_button_text') ?></button> -->
+    
+               <?php echo get_post_meta($post->ID,'leadbox_code',true ) ;?>
+
                </div>
 
         </div>
     </section>
 </div>
+<?php }
+
+ ?>
 
 
 
