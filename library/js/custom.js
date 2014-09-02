@@ -1,4 +1,6 @@
 jQuery(document).ready(function ($) {
+
+
     var $container = $('.isotope-grid');
     var isotope = $('#isotope li');
     // init

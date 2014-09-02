@@ -32,6 +32,11 @@ function addTwitterBSClass(thisObj) {
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
+
+	$('.smiley img').addClass('img-responsive');
+
+	
+
 	// modify tag cloud links to match up with twitter bootstrap
 	$("#tag-cloud a").each(function() {
 	    addTwitterBSClass(this);

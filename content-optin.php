@@ -11,10 +11,10 @@ for ($i=1 ; $i <= 4; $i++) {
              <h2 class="text-center"><?php echo get_post_meta($post->ID,'leadbox_headline'.$i,true ) ;?></h2> 
                 
                 </div>
-               <div class="col-xs-8 col-xs-offset-2 smiley"> 
-
+               <div class="smiley"> 
+              <center>
                <?php echo get_post_meta($post->ID,'leadbox_code'.$i,true ) ;?>
-
+              </center>
                </div>
 
         </div>
