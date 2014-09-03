@@ -1,6 +1,11 @@
 /* All the styles that you would normally find in the style.css */
 @import "mixins.less";
 
+.box-shadow{
+	-webkit-box-shadow: 0px 1px 0px #FFF, 0px 1px 1px rgba(0, 0, 0, 0.2) inset;
+	-moz-box-shadow: 0px 1px 0px #FFF, 0px 1px 1px rgba(0, 0, 0, 0.2) inset;
+	box-shadow: 0px 1px 0px #FFF, 0px 1px 1px rgba(0, 0, 0, 0.2) inset;
+}
 /* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* For modern browsers */
 .clearfix:before,
@@ -145,6 +150,7 @@ body.admin-bar .navbar-fixed-top{
 
 input, textarea, select, .uneditable-input {
 	margin-bottom: 0;
+
 }
 
 .navbar-search{
@@ -285,7 +291,7 @@ h2.category-name{
 
 /*Modal Styling*/
 
-.modal{
+/*.modal{
 
 	form{width: 100%;}
 
@@ -311,6 +317,8 @@ input[type=submit]{
 	color: #fff;
 	border: 1px solid #dddddd;
 }
+*/
+
 
 		
 
@@ -370,6 +378,7 @@ form#contact-form input[type=text] {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	font-family: "GothamRounded Light";
+
 }
 form#contact-form textarea {
 	border: none;
@@ -386,8 +395,9 @@ form#contact-form textarea {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	font-family: "GothamRounded Light";
+
 }
-form#contact-form input[type=submit] {
+form#contact-form input[type=submit],#custom-login-form input[type=submit] {
 	background-color: #5fcf80;
 	border-color: #3ac162;
 	border-width: 1px 1px 3px;
@@ -448,6 +458,8 @@ form#gform_1.contact-form1 input[type=text] {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	font-family: "GothamRounded Light";
+	border-radius:5px;
+
 }
 form#gform_1.contact-form1 textarea {
 	border: none;
@@ -464,6 +476,7 @@ form#gform_1.contact-form1 textarea {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	font-family: "GothamRounded Light";
+	border-radius:5px;
 }
 form#gform_1.contact-form1 input[type=submit] {
 	background-color: #5fcf80;
@@ -482,6 +495,7 @@ form#gform_1.contact-form1 input[type=submit] {
 	font-family: "GothamRounded Light";
 	font-weight: bold;
 	font-size: 22px;
+
 }
 form#gform_1.contact-form1 input[type=submit]:hover {
 	background-color:#4bc970;
@@ -494,6 +508,40 @@ form#gform_1.contact-form1 input[type=submit]:hover {
 	border-style: solid;
 }
 
+/* login page */
+
+form#custom-login-form {
+display: block;
+width: 375px;
+margin: 10px auto;
+}
+form#custom-login-form input[type=text], form#custom-login-form input[type=password] {
+border-radius: 5px;
+background-color: #eef1f5;
+border: none;
+font-size: 20px;
+color: #8c989e;
+padding: 15px;
+width: 100%;
+font-weight: 400;
+letter-spacing: 1px;
+margin-bottom:10px;
+.box-shadow();
+
+}
+form#custom-login-form input[type=submit] {
+display: block;
+clear: both;
+margin: 10px auto;
+}
+
+#custom-login-form a{
+	color:#8c989e;
+}
+
+#custom-login-form a:hover{
+	color: #1B97C9;
+}
 
 
 form#gform_1.contact-form1 label.gfield_label{
@@ -946,6 +994,7 @@ blockquote.pull-left{
 		font-size: 16px;
 	}
  
+  form#custom-login-form { width: 250px}
 
 }
 
@@ -965,6 +1014,8 @@ blockquote.pull-left{
  	.media-object{width: 150px;}
 
  	#gform_submit_button_1{margin-left: 50px;}
+
+
 }
 
 
@@ -1075,7 +1126,7 @@ blockquote.pull-left{
 	letter-spacing: 2px;
 	font-family: "GothamRounded Book";
 
-	li{ margin-right: 67px; 
+	li{ margin-right: 63px; 
 		.menu-hover;
 		border-color: @black;
 		a{padding: 15px 2px 2px 2px;}

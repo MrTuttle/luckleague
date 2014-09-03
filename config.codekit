@@ -194,6 +194,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/login-steps.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4971,
+		"inputAbbreviatedPath": "\/images\/login-steps.png",
+		"outputAbbreviatedPath": "\/images\/login-steps.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/modal-lock.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -661,7 +672,7 @@
 		"outputAbbreviatedPath": "\/library\/css\/bootstrap.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 2,
+		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
