@@ -109,7 +109,7 @@ src: url("../../fonts/gotham-rounded-book.woff");
 
 /*font sizes*/
 
-h1{ font-size: @font-size-h1 + 4px; font-family: "GothamRounded Medium"}
+h1{ font-size: @font-size-h1 + 4px; font-family: "GothamRounded Medium";color:#384047;}
 
 
 /*headlines*/
@@ -348,7 +348,7 @@ input[type=submit]{
 }
 
 
-/*Concact Form*/
+/*Contact Form*/
 
 form#contact-form {
 	width: 100%;
@@ -397,7 +397,7 @@ form#contact-form textarea {
 	font-family: "GothamRounded Light";
 
 }
-form#contact-form input[type=submit],#custom-login-form input[type=submit] {
+input[type=submit],button {
 	background-color: #5fcf80;
 	border-color: #3ac162;
 	border-width: 1px 1px 3px;
@@ -415,7 +415,7 @@ form#contact-form input[type=submit],#custom-login-form input[type=submit] {
 	font-weight: bold;
 	font-size: 22px;
 }
-form#contact-form input[type=submit]:hover {
+input[type=submit]:hover{
 	background-color:#4bc970;
 	border-color: #3ac162;
 	border-width: 1px 1px 3px;
@@ -425,7 +425,6 @@ form#contact-form input[type=submit]:hover {
 	color: #fff;
 	border-style: solid;
 }
-
 
 form#gform_1.contact-form1 {
 	width: 70%;
@@ -508,6 +507,8 @@ form#gform_1.contact-form1 input[type=submit]:hover {
 	border-style: solid;
 }
 
+/* specific page-template styles */
+
 /* login page */
 
 form#custom-login-form {
@@ -542,6 +543,98 @@ margin: 10px auto;
 #custom-login-form a:hover{
 	color: #1B97C9;
 }
+
+
+/*Sign up Template*/
+
+.page-template-page-signup-php{
+	.box{
+		border-radius: 10px;
+		border: 1px solid #dce0e5;
+		background-color: #eef1f5;
+		padding-top: 90px;
+		position: relative;
+		margin-top: 100px;
+		padding-bottom: 10px;
+	}
+
+	
+}
+
+.pricing-container{
+		ul{padding-left: 10px;}
+
+		li{
+			font-family: "GothamRounded Light";
+		 	list-style-type: none;
+		    font-size: 16px;
+		 	margin-bottom: 10px;
+
+		}
+
+		button a{color:#fff; text-decoration: none; }
+
+		.price{
+		 	position: absolute;
+		 	color: #fff;
+		 	font-size: 40px;
+		 }
+
+		 .per-month{
+		 	font-size: 12px;
+		 	color:#fff;
+		 	position: absolute;
+		 }
+
+		 .gray{	color: @light-gray;
+				button { background-color: @light-gray;
+						border-color: @light-gray; }
+			 }
+
+		 .green{color: #36b656; }
+}
+
+.circle{
+	display: block;
+	width: 151px;
+	height: 151px;
+	position: absolute;
+	top:-86px;
+}
+
+.gray-circle{ 
+	.circle(); 
+	background: url('../../images/gray-circle.png'); 
+	left:82px; 
+
+	.price{
+		top:45px;
+		left:35px;
+	 }
+
+	.per-month{
+		top:90px;
+		left:42px;
+	}
+
+}
+
+.green-circle{ 
+	.circle(); 
+	background: url('../../images/green-circle.png'); 
+	left:82px; 
+
+	.price{
+		top:45px;
+		left:25px;
+	 }
+
+	.per-month{
+		top:90px;
+		left:50px;
+	}
+
+}	
 
 
 form#gform_1.contact-form1 label.gfield_label{
@@ -838,6 +931,9 @@ ol.commentlist #respond{
 
 /* specific post-type styles */
 
+
+
+
 /* image attachment */
 
 .attachment #main .post_content img{
@@ -975,7 +1071,6 @@ blockquote.pull-left{
 }
 
 
-
 @media only screen and(max-width:480px){
 
 	#gform_submit_button_1{margin-left: 40px;}
@@ -996,7 +1091,7 @@ blockquote.pull-left{
  
   form#custom-login-form { width: 250px}
 
-}
+ }
 
 @media only screen and (max-width:320px){
 	#gform_submit_button_1{margin-left: 25px;}
@@ -1004,6 +1099,20 @@ blockquote.pull-left{
 		font-size: 14px;
 		padding:10px 12px;
 	}
+
+
+}
+
+@media only screen and(min-width:380px ){
+
+	.gray-circle,
+	.green-circle{
+
+		left:110px;
+	}
+
+
+
 }
 
 @media only screen and (min-width: 480px){
@@ -1015,9 +1124,29 @@ blockquote.pull-left{
 
  	#gform_submit_button_1{margin-left: 50px;}
 
+ 	.page-template-page-signup-php .box{
+
+	li{font-size: 18px;margin-bottom: 15px;}
+	text-align: center;
+	padding-bottom: 15px;
+	}
+
+	.gray-circle,
+	.green-circle{
+
+		left:170px;
+	}
 
 }
 
+@media only screen and(min-width:568px ){
+	.gray-circle,
+	.green-circle{
+
+		left:210px;
+	}
+}
+	
 
 @media only screen and (min-width: 640px) {
 	.carousel-caption p{
@@ -1025,6 +1154,12 @@ blockquote.pull-left{
 	}
 
 	#gform_submit_button_1{margin-left: 70px;}
+
+	.gray-circle,
+	.green-circle{
+
+		left:270px;
+	}
 }
 
 
@@ -1034,12 +1169,22 @@ blockquote.pull-left{
 	}
 
 	#gform_submit_button_1{margin-left: 115px;}
+
+ .page-template-page-signup-php .box{
+ 	padding-top: 80px;
+ 	margin-top: 80px;
+	li{font-size: 18px;margin-bottom: 15px;text-align: left}
 }
 
-#eModal-1{
-		height: 405px;
-		overflow: hidden;
-		}
+
+
+ .col-sm-2 img{ margin-top: 190px; }
+
+ .gray-circle,
+ .green-circle{left:85px;}
+
+	
+}
 
 @media only screen and (min-width: 980px) {
 
@@ -1063,9 +1208,6 @@ blockquote.pull-left{
 		padding-right: 20px;
 	}
 
-
-
-	
 	#inner-footer{
 		padding: 0;
 	}
@@ -1113,6 +1255,32 @@ blockquote.pull-left{
 		padding-left: 0;
 		padding-right: 0;
 	}
+
+	.page-template-page-signup-php{
+
+
+		.box{
+			padding-top: 90px;
+			padding-bottom: 20px;
+			margin-top: 0px;
+		 }
+		.pricing-container{
+			 margin-top: 90px;
+			 li{
+		 	    font-size: 20px;
+		 		margin-bottom: 20px;
+			}
+		}
+		 
+		 
+	}
+
+	.gray-circle,
+	.green-circle{
+
+		left:135px;
+	}
+
 }
 
 
@@ -1156,6 +1324,10 @@ blockquote.pull-left{
      }
 
 	.smiley{margin: 0 auto;float: none;}
+
+	
+	
+
 }
 
 
