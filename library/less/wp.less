@@ -262,7 +262,10 @@ input, textarea, select, .uneditable-input {
 	  	color:#1c1c1c;
 	  	background: none;
 	  }
-	}
+
+    }
+
+    a.current{color:#1c1c1c;}
 }
 
 
@@ -288,39 +291,22 @@ h2.category-name{
 	line-height: 1.6em;
 }
 
-
-/*Modal Styling*/
-
-/*.modal{
-
-	form{width: 100%;}
-
-	input#inf_field_FirstName,
-input#inf_field_Email{
-	width: 100%;
-	font-size: 25px;
-	color: #7a7f81;
-	padding: 25px 25px 15px 25px;
-	margin-bottom: 20px;
-	border: medium none;
-	border-radius: 5px;
-}
-input#inf_field_FirstName{background: #fff url('../../images/username-bg.png') no-repeat 97% center}
-input#inf_field_Email{background: #fff url('../../images/email-bg.png') no-repeat 97% center}
+#search{
+	/*-webkit-box-shadow: 0px 5px 10px 0px rgba(216, 223, 232, 1);
+-moz-box-shadow:    0px 5px 10px 0px rgba(216, 223, 232, 1);
+box-shadow:         0px 5px 10px 0px rgba(216, 223, 232, 1);*/
+//border-color: rgb(216, 223, 232);
+border: none;
+border-bottom: 3px solid #d8dfe8;
+padding: 12px;
+background:#ffffff url('../../images/search-icon.svg') 97% no-repeat;
+background-size: 25px 25px;
+font-size: 20px;
+height: 60px;
 
 }
 
-
-input[type=submit]{
-	padding: 25px;background-color: #4bc970;border-color: #3ac162;border-width: 1px 1px 3px;
-	box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-	color: #fff;
-	border: 1px solid #dddddd;
-}
-*/
-
-
-		
+.form-control:focus{ border-color:#d8dfe8; box-shadow:none } 
 
 /* Optin Styling*/
 
@@ -1090,6 +1076,8 @@ blockquote.pull-left{
 	}
  
   form#custom-login-form { width: 250px}
+
+  
 
  }
 

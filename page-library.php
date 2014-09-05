@@ -44,26 +44,32 @@ Template Name: Library Template
 				<div id="main" class="col-sm-12 clearfix isotope-grid" role="main">
 
 					
-					<?php
-                    $args = array ('post_type' => 'training',
-                                   'posts_per_page' =>'-1',
-                                   'orderby' => 'date'
-                        );
+					   <?php
+              $args = array ('post_type' => 'training',
+                             'posts_per_page' =>'-1',
+                             'orderby' => 'date'
+                  );
 
-                        // The Query
-                        $query = new WP_Query( $args );
+                  // The Query
+                  $query = new WP_Query( $args );
 
-                        // The Loop
-                        if ( $query->have_posts() ) { while ( $query->have_posts() ) { ?>
+                  // The Loop
+                  if ( $query->have_posts() ) { while ( $query->have_posts() ) { ?>
 
-                       <?php $query->the_post();
-                            $terms_class = '';
-                            $terms  = get_field('category');
-							if( $terms){ foreach ($terms as $term) { $terms_class .= $term->slug . ' '; } }
+                 <?php $query->the_post();
+
+                      $terms_class = '';
+                      $terms  = get_field('category');
+                      $tags = get_the_terms($post->ID, 'training_tags' );
+                      $tags_output = '';
+               
+
+  							if( $terms){ foreach ($terms as $term) { $terms_class .= $term->slug . ' '; } }
+                foreach ($tags as $tag) { $tags_output .= $tag->slug . ' '; }
 						?>	
 
 								<div class="row clearfix">
-                  <div class="col-sm-12 media all item <?php echo $terms_class; ?>">
+                  <div class="col-sm-12 media all item <?php echo $terms_class . $tags_output; ?>">
                   <a class="pull-left" href="<?php echo get_permalink($post->id); ?>">
                     <img class="media-object" src="<?php the_field('image') ?>" alt="training image">
                   </a>

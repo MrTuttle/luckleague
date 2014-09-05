@@ -7,7 +7,8 @@ for ($i=1 ; $i <= 4; $i++) {
     <section class="container">
         <div id="optin" class="row clearfix" style="position: relative">
                   <div class="optin-smiley">
-                  <img class="text-center hidden-xs" style="position: absolute;left:47%;bottom:85%"src="<?php echo get_template_directory_uri() .'/images/optin-smiley.png' ?>" alt="smiley">
+                  <img class="text-center hidden-xs" style="position: absolute;left:47%;bottom:85%"
+                  src="<?php echo get_template_directory_uri() .'/images/optin-smiley.png' ?>" alt="smiley">
              <h2 class="text-center"><?php echo get_post_meta($post->ID,'leadbox_headline'.$i,true ) ;?></h2> 
                 
                 </div>

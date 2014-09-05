@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){function r(r){for(var i=window.location.search.substring(1),n=i.split("&"),o=0;o<n.length;o++){var t=n[o].split("=");if(t[0]==r)return t[1]}}$("#search").focus();var i=$(".isotope-grid")});

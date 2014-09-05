@@ -75,7 +75,7 @@ Template Name: Plans and Signup Template
 
 				<div id="main" class="col-sm-12 clearfix" role="main">
 
-						
+
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
