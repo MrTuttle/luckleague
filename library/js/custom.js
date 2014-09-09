@@ -1,5 +1,10 @@
 jQuery(document).ready(function ($) {
 
+ $("#search").keyup(function(e) {
+  $(this).closest('form').submit();
+ });
+ 
+
 function getUrlParameter(sParam)
   {
       var sPageURL = window.location.search.substring(1);
