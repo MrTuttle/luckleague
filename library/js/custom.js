@@ -1,8 +1,5 @@
 jQuery(document).ready(function ($) {
 
-
- $('#search').focus();
-
 function getUrlParameter(sParam)
   {
       var sPageURL = window.location.search.substring(1);

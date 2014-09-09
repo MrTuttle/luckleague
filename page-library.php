@@ -71,7 +71,7 @@ Template Name: Library Template
 								<div class="row clearfix">
                   <div class="col-sm-12 media all item <?php echo $terms_class . $tags_output; ?>">
                   <a class="pull-left" href="<?php echo get_permalink($post->id); ?>">
-                    <img class="media-object" src="<?php the_field('image') ?>" alt="training image">
+                    <img class="media-object" src="<?php the_field('image') ?>" alt="training image" width="150" height="150">
                   </a>
                   <div class="media-body">
                    <h4 class="media-heading"><a href="<?php echo get_permalink($post->id); ?>"><?php echo get_the_title($post->ID); ?></a></h4>

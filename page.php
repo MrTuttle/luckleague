@@ -83,4 +83,6 @@
 
 		 ?>
 
+<?php if (!is_user_logged_in()) { get_template_part('content','optin' ); } ?> 
+
 <?php get_footer(); ?>
