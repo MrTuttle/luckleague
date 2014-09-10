@@ -47,6 +47,7 @@ function getUrlParameter(sParam)
    var search = getUrlParameter('search');
 
    if (typeof search !== 'undefined') {
+    $('h2.category-name').hide();
     search = search.toLowerCase();
     var search_tag = '.' + search + ' ';
 

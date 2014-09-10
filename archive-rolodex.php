@@ -1,16 +1,6 @@
 <?php get_header(); ?>
 			
-<div style="background-color:#EEF1F5;">			
- <div class="container">
-  <div class="clearfix row">
-    <div class="col-sm-12 headline-area">
-      <h1 class="text-center"><?php the_field('big_headline',10) ?></h1>
-            <p class="text-center small-headline"><?php the_field('small_headline',10) ?></p>
-    </div>
-  </div>
- </div>
-</div>
-
+<?php get_template_part('content','headline' ); ?>
 
   <div class="rainbow-line"></div>
 
@@ -51,10 +41,14 @@
                         // The Loop
                         if ( $query->have_posts() ) {
                           while ( $query->have_posts() ) { ?>
-                            <?php $query->the_post(); ?>
+                            <?php $query->the_post(); 
+                             $tags = get_the_terms($post->ID, 'rolodex_tags' );
+                             $tags_output = ''; 
+                             foreach ($tags as $tag) { $tags_output .= $tag->slug . ' '; } 
+                             ?>
 
                    <div class="row clearfix">
-                     <div class="media col-sm-12">
+                     <div class="media item col-sm-12 <?php echo $tags_output; ?>">
                       <a class="pull-left" href="<?php echo $perma_link = get_permalink($post->id ); ?>">
                         <img class="media-object img-responsive" src="<?php the_field('image'); ?>" alt="rolodex image">
                       </a>
