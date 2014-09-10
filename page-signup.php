@@ -41,7 +41,7 @@ Template Name: Plans and Signup Template
 
 	  				<div class="col-sm-2">
 	  					<center>
-	  					<img src="<?php echo get_template_directory_uri() . '/images/plans-or.png' ?>" alt="or" class="img-responsive">
+	  					<img src="<?php echo get_template_directory_uri() . '/images/plans-or.png' ?>" alt="or" >
 	  					</center>
 	  				</div>
 
