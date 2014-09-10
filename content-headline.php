@@ -13,6 +13,8 @@
 
 				if (is_page_template('page-library.php' ) || is_page_template('page-podcast.php' )) {
 					get_template_part('searchform'); 
+				}elseif (is_post_type_archive('rolodex' )) {
+					get_template_part('rolodex-search');
 				}
 
 			?>
