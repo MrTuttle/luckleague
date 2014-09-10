@@ -1,5 +1,5 @@
 <form action="<?php echo get_permalink($post->ID); ?>" 
-method="get" class="form-inline col-sm-12">
+method="get" class="form-inline col-md-8 col-md-offset-2">
     <fieldset>
 		<div class="input-group">
 			<input type="text" name="search" id="search" placeholder="" value="<?php the_search_query(); ?>" class="form-control input-lg" />

@@ -3,7 +3,6 @@ jQuery(document).ready(function ($) {
  $("#search").keyup(function(e) {
   $(this).closest('form').submit();
  });
- 
 
 function getUrlParameter(sParam)
   {
@@ -48,7 +47,7 @@ function getUrlParameter(sParam)
    var search = getUrlParameter('search');
 
    if (typeof search !== 'undefined') {
-    search.toLowerCase();
+    search = search.toLowerCase();
     var search_tag = '.' + search + ' ';
 
      container.isotope({
@@ -58,5 +57,19 @@ function getUrlParameter(sParam)
               filter:  search_tag
 
      });
-   } 
+
+   //Check if there are any tags found
+    var items = $('#main').find('.item');
+    var itemsArray = [];
+    items.each(function(index){
+     if($(this).hasClass(search)){
+        itemsArray.push('found');
+     }
+    });
+
+     if ($.inArray('found',itemsArray) === -1) {
+         $('#content').prepend('<div class="col-sm-12"><img src="http://luckleague.com/images/search/greatidea.png" class="img-responsive" style="margin:0 auto;" /></div>');
+     }
+     
+   }
 });
