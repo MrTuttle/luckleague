@@ -573,7 +573,7 @@ margin: 10px auto;
 		 .per-month{
 		 	font-size: 12px;
 		 	color:#fff;
-		 	position: absolute;
+		 	vertical-align: middle;
 		 }
 
 		 .gray{	color: @light-gray;
@@ -592,19 +592,24 @@ margin: 10px auto;
 	top:-86px;
 }
 
+
 .gray-circle{ 
 	.circle(); 
 	background: url('../../images/gray-circle.png'); 
 	left:82px; 
 
 	.price{
-		top:45px;
-		left:35px;
+		top:35px;
+		left:25px;
 	 }
 
-	.per-month{
+	.basic{
 		top:90px;
-		left:42px;
+		left:50px;
+		position: absolute;
+		font-size: 18px;
+		color: #a1a8af;
+
 	}
 
 }
@@ -615,13 +620,28 @@ margin: 10px auto;
 	left:82px; 
 
 	.price{
-		top:45px;
+		top:35px;
 		left:25px;
 	 }
 
-	.per-month{
+	.vip{
 		top:90px;
-		left:50px;
+		left:57px;
+		
+	}
+
+	.best-value,
+	.vip{
+		position: absolute;
+		font-size: 18px;
+		color: #36b656;
+
+	}
+
+	.best-value{
+		left: 170px;
+		width: 100px;
+		top: 20px;
 	}
 
 }	
@@ -1101,6 +1121,9 @@ blockquote.pull-left{
 
 .page-template-page-signup-php .box{
  	width: 300px;
+ 	height: 474px;
+
+ 	.green-circle .best-value{display: none}
 	
 }
 
