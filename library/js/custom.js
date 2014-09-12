@@ -1,8 +1,8 @@
 jQuery(document).ready(function ($) {
 
- $("#search").keyup(function(e) {
+/* $("#search").keyup(function(e) {
   $(this).closest('form').submit();
- });
+ });*/
 
 function getUrlParameter(sParam)
   {
@@ -66,10 +66,10 @@ function getUrlParameter(sParam)
      if($(this).hasClass(search)){
         itemsArray.push('found');
      }
-    });
+    }); 
 
      if ($.inArray('found',itemsArray) === -1) {
-         $('#content').prepend('<div class="col-sm-12"><img src="http://luckleague.com/images/search/greatidea.png" class="img-responsive" style="margin:0 auto;" /></div>');
+         $('#content').prepend('<div class="col-sm-12"><a href="http://luckleague.com/concierge"><img src="http://luckleague.com/images/search/greatidea.png" class="img-responsive" style="margin:0 auto;" /></a></div>');
      }
      
    }

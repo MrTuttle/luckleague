@@ -328,7 +328,7 @@ if( !function_exists( "theme_js" ) ) {
      if (is_page_template('page-library.php' ) ||  is_page_template('page-podcast.php' ) 
       || is_post_type_archive('rolodex')) {
             wp_enqueue_script( 'isotope');
-            wp_enqueue_script( 'custom', get_template_directory_uri() . '/library/js/custom.js', array( 'jquery' ), 1.0, false);
+            wp_enqueue_script( 'custom', get_template_directory_uri() . '/library/js/min/custom-min.js', array( 'jquery' ), 1.0, false);
         }
 
    
