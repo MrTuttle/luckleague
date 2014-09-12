@@ -22,8 +22,8 @@ Template Name: Plans and Signup Template
 						
   					<div class="col-sm-5 gray box">
   					<span class="gray-circle">
-  						<span class="price">$<?php the_field('price_per_month') ?></span>
-  						<span class="per-month">per month</span>
+  						<span class="price">$<?php the_field('price_per_month') ?><span class="per-month"> / mo</span></span>
+  						<span class="basic">Basic</span>
   					</span>
 	  					<ul>
 	  					<li><img class="alignleft" src="<?php echo get_template_directory_uri() . '/images/gray-check.png' ?>" alt="">
@@ -47,8 +47,9 @@ Template Name: Plans and Signup Template
 
 	  				<div class="col-sm-5 green box">
 	  				<span class="green-circle">
-	  					<span class="price">$<?php the_field('price_per_year') ?></span>
-  						<span class="per-month">per year</span>
+	  					<span class="best-value">Best Value!</span>
+	  					<span class="price">$<?php the_field('price_per_year') ?><span class="per-month"> / mo</span></span>
+  						<span class="vip">VIP</span>
 	  				</span>
 	  					<ul>
 	  					<li><img class="alignleft" src="<?php echo get_template_directory_uri() . '/images/green-check.png' ?>" alt=""><?php the_field('green_check_list_1_text') ?></li>
