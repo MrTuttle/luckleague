@@ -47,7 +47,15 @@ Template Name: Library Template
 					   <?php
               $args = array ('post_type' => 'training',
                              'posts_per_page' =>'-1',
-                             'orderby' => 'date'
+                             'orderby' => 'date',
+                             'meta_query'  => array(
+                              array(
+                                'key'       => 'show_on/off',
+                                'value'     => true,
+                                'compare'   => '=',
+                              ),
+                            )
+
                   );
 
                   // The Query

@@ -58,7 +58,7 @@ Template Name: Plans and Signup Template
 	  					<li><img class="alignleft" src="<?php echo get_template_directory_uri() . '/images/green-check.png' ?>" alt=""><?php the_field('green_check_list_4_text') ?></li>
 	  					<li><img class="alignleft" src="<?php echo get_template_directory_uri() . '/images/green-check.png' ?>" alt=""><?php the_field('green_check_list_5_text') ?></li>
 	  					<center>
-	  						<button><a href="<?php the_field('gray_button_url') ?>"><?php the_field('green_button_text') ?></a></button>
+	  						<button><a href="<?php the_field('green_button_url') ?>"><?php the_field('green_button_text') ?></a></button>
 	  					</center>
 	  					</ul>
   					</div>
